@@ -30,4 +30,9 @@ class Ordenacao():
            Retorna: "1,2,3,4,5"
            @return String com o conteudo do array formatado
      """
-        return str(self.arranjo)[1:-1]
+        para_string = str(self.arranjo[0])
+        self.arranjo.pop(0)
+        for numero in self.arranjo:
+            para_string += "," + str(numero)
+
+        return para_string
